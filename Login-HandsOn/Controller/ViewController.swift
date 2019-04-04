@@ -53,11 +53,10 @@ class ViewController: UIViewController {
             } else if !(self.loginViewModel.passwordViewModel.validateCredentials()) {
                 self.loginViewModel.errorMessage.value = self.loginViewModel.passwordViewModel.errorMessage
             }
-            
-            self.createCallbacks()
         }).disposed(by: disposeBag)
     }
     
+    // Callbacks will be binded and called whenever value is changed
     private func createCallbacks() {
         // Case success
         self.loginViewModel.isSuccess.asObservable()
@@ -91,9 +90,13 @@ class ViewController: UIViewController {
                             self.passwordTextField.becomeFirstResponder()
                         }
                         
+                        alertController.removeFromParent()
+                        
                         // Reset all
                         self.loginViewModel.model.email = ""
                         self.loginViewModel.model.password = ""
+                        
+                        // Triggers the callback of isSuccess <- observable
                         self.loginViewModel.isSuccess.value = false
                     })
                     alertController.addAction(okAction)
