@@ -15,7 +15,7 @@ class PasswordViewModel: ValidationProtocol {
     // MARK: - Attributes
     var errorMessage: String {
         get {
-            return "Please enter a valid password"
+            return "Please enter a valid password of length 6 until 20"
         }
     }
     var data: Variable<String> = Variable("")
@@ -23,7 +23,7 @@ class PasswordViewModel: ValidationProtocol {
     
     // MARK: - Methods
     func validateCredentials() -> Bool {
-        guard validateLength(text: data.value, size: (6,15)) else {
+        guard validateLength(text: data.value, size: (6, 20)) else {
             errorValue.value = errorMessage
             return false
         }
