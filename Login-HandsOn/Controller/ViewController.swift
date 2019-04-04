@@ -48,9 +48,12 @@ class ViewController: UIViewController {
         }).subscribe(onNext: { [unowned self] in
             if self.loginViewModel.validateCredentials() {
                 self.loginViewModel.loginUser()
-            } else {
+            } else if !(self.loginViewModel.emailViewModel.validateCredentials()) {
+                self.loginViewModel.errorMessage.value = self.loginViewModel.emailViewModel.errorMessage
+            } else if !(self.loginViewModel.passwordViewModel.validateCredentials()) {
                 self.loginViewModel.errorMessage.value = self.loginViewModel.passwordViewModel.errorMessage
             }
+            
             self.createCallbacks()
         }).disposed(by: disposeBag)
     }
