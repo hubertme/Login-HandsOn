@@ -17,6 +17,7 @@
 		FC3ADAFE2255CC5D0095E7FE /* ValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADAFD2255CC5D0095E7FE /* ValidationProtocol.swift */; };
 		FC3ADB002255CFE80095E7FE /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADAFF2255CFE80095E7FE /* PasswordViewModel.swift */; };
 		FC3ADB022255D3520095E7FE /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADB012255D3520095E7FE /* EmailViewModel.swift */; };
+		FC3ADB042255D81E0095E7FE /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADB032255D81E0095E7FE /* LoginViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		FC3ADAFD2255CC5D0095E7FE /* ValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationProtocol.swift; sourceTree = "<group>"; };
 		FC3ADAFF2255CFE80095E7FE /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
 		FC3ADB012255D3520095E7FE /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
+		FC3ADB032255D81E0095E7FE /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				FC3ADAFD2255CC5D0095E7FE /* ValidationProtocol.swift */,
 				FC3ADAFF2255CFE80095E7FE /* PasswordViewModel.swift */,
 				FC3ADB012255D3520095E7FE /* EmailViewModel.swift */,
+				FC3ADB032255D81E0095E7FE /* LoginViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				FC3ADAE62255C8D50095E7FE /* AppDelegate.swift in Sources */,
 				FC3ADAFE2255CC5D0095E7FE /* ValidationProtocol.swift in Sources */,
 				FC3ADB002255CFE80095E7FE /* PasswordViewModel.swift in Sources */,
+				FC3ADB042255D81E0095E7FE /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
