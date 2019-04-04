@@ -46,13 +46,22 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Log Me In"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login credential label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MjE-I4-3H7">
+                                <rect key="frame" x="40" y="528" width="295" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cbj-ln-mUU" firstAttribute="top" secondItem="iEw-ay-ZWz" secondAttribute="bottom" constant="48" id="4yg-7R-Vdu"/>
                             <constraint firstItem="MNQ-el-gs7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CW4-hk-6FA"/>
                             <constraint firstItem="cbj-ln-mUU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEY-FN-XV0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MjE-I4-3H7" secondAttribute="trailing" constant="40" id="GIf-dD-S22"/>
+                            <constraint firstItem="MjE-I4-3H7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="Kbx-Y6-Zhw"/>
                             <constraint firstItem="0Kn-kA-mQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q3E-Bz-AuD"/>
+                            <constraint firstItem="MjE-I4-3H7" firstAttribute="top" secondItem="0Kn-kA-mQC" secondAttribute="bottom" constant="54" id="TOX-gy-14n"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lge-3p-K8D" secondAttribute="trailing" constant="40" id="aus-ZJ-oF8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iEw-ay-ZWz" secondAttribute="trailing" constant="40" id="hHX-jn-Rnl"/>
                             <constraint firstItem="iEw-ay-ZWz" firstAttribute="top" secondItem="MNQ-el-gs7" secondAttribute="bottom" constant="24" id="hTT-hX-gpC"/>
@@ -65,6 +74,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="credentialLabel" destination="MjE-I4-3H7" id="qkz-mQ-PYO"/>
                         <outlet property="emailTextField" destination="iEw-ay-ZWz" id="Ige-eR-QXT"/>
                         <outlet property="loginButton" destination="0Kn-kA-mQC" id="xqj-bS-h4x"/>
                         <outlet property="passwordTextField" destination="lge-3p-K8D" id="Ndx-tH-pn9"/>

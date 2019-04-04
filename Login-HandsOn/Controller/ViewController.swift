@@ -21,11 +21,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var credentialLabel: UILabel!
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.setupElements()
         self.bindViewModels()
         self.createCallbacks()
     }
@@ -47,6 +49,15 @@ class ViewController: UIViewController {
         }).subscribe(onNext: { [unowned self] in
             if self.loginViewModel.validateCredentials() {
                 self.loginViewModel.loginUser()
+                self.credentialLabel.text = "Attempted login with\n\nEmail: \(self.loginViewModel.model.email)\nPassword: \(self.loginViewModel.model.password)"
+                UIView.animate(withDuration: 2, animations: {
+                    self.credentialLabel.alpha = 1
+                })
+            } else {
+                self.credentialLabel.text = ""
+                UIView.animate(withDuration: 2, animations: {
+                    self.credentialLabel.alpha = 0
+                })
             }
         }).disposed(by: disposeBag)
     }
@@ -55,7 +66,7 @@ class ViewController: UIViewController {
         // Case success
         self.loginViewModel.isSuccess.asObservable()
             .bind { (value) in
-                print("Value of binding: \(value)")
+                print("Callbacks when success")
         }.disposed(by: disposeBag)
         
         // Case failed
@@ -63,6 +74,10 @@ class ViewController: UIViewController {
             .bind { (errorMessage) in
                 print("Error with: \(errorMessage ?? "no error")")
         }.disposed(by: disposeBag)
+    }
+    
+    private func setupElements() {
+        self.credentialLabel.alpha = 0
     }
 }
 
