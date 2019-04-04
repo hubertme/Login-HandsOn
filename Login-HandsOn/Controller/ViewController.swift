@@ -49,16 +49,10 @@ class ViewController: UIViewController {
         }).subscribe(onNext: { [unowned self] in
             if self.loginViewModel.validateCredentials() {
                 self.loginViewModel.loginUser()
-                self.credentialLabel.text = "Attempted login with\n\nEmail: \(self.loginViewModel.model.email)\nPassword: \(self.loginViewModel.model.password)"
-                UIView.animate(withDuration: 2, animations: {
-                    self.credentialLabel.alpha = 1
-                })
             } else {
-                self.credentialLabel.text = ""
-                UIView.animate(withDuration: 2, animations: {
-                    self.credentialLabel.alpha = 0
-                })
+                self.loginViewModel.errorMessage.value = self.loginViewModel.passwordViewModel.errorMessage
             }
+            self.createCallbacks()
         }).disposed(by: disposeBag)
     }
     
@@ -67,12 +61,36 @@ class ViewController: UIViewController {
         self.loginViewModel.isSuccess.asObservable()
             .bind { (value) in
                 print("Callbacks when success")
+                if value == true {
+                    self.credentialLabel.text = "Attempted login with\n\nEmail: \(self.loginViewModel.model.email)\nPassword: \(self.loginViewModel.model.password)"
+                    UIView.animate(withDuration: 2, animations: {
+                        self.credentialLabel.alpha = 1
+                    })
+                }
         }.disposed(by: disposeBag)
         
         // Case failed
         self.loginViewModel.errorMessage.asObservable()
             .bind { (errorMessage) in
                 print("Error with: \(errorMessage ?? "no error")")
+                if let errorMessage = errorMessage {
+                    self.credentialLabel.text = ""
+                    UIView.animate(withDuration: 2, animations: {
+                        self.credentialLabel.alpha = 0
+                    })
+                    
+                    let alertController = UIAlertController(title: "Failed to sign in", message: "\(errorMessage)", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "Ok!", style: .cancel, handler: { (_) in
+                        self.emailTextField.text = ""
+                        self.passwordTextField.text = ""
+                        
+                        // For making sure
+                        self.loginViewModel.model.email = ""
+                        self.loginViewModel.model.password = ""
+                    })
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
+                }
         }.disposed(by: disposeBag)
     }
     
