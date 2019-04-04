@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,63 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Login_HandsOn" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MNQ-el-gs7">
+                                <rect key="frame" x="162.66666666666666" y="179" width="50" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your email here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iEw-ay-ZWz">
+                                <rect key="frame" x="40" y="227" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" textContentType="email"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbj-ln-mUU">
+                                <rect key="frame" x="142.66666666666666" y="305" width="90" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lge-3p-K8D">
+                                <rect key="frame" x="40" y="353" width="295" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Kn-kA-mQC">
+                                <rect key="frame" x="150" y="441" width="75" height="33"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Log Me In"/>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cbj-ln-mUU" firstAttribute="top" secondItem="iEw-ay-ZWz" secondAttribute="bottom" constant="48" id="4yg-7R-Vdu"/>
+                            <constraint firstItem="MNQ-el-gs7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CW4-hk-6FA"/>
+                            <constraint firstItem="cbj-ln-mUU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FEY-FN-XV0"/>
+                            <constraint firstItem="0Kn-kA-mQC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q3E-Bz-AuD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lge-3p-K8D" secondAttribute="trailing" constant="40" id="aus-ZJ-oF8"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iEw-ay-ZWz" secondAttribute="trailing" constant="40" id="hHX-jn-Rnl"/>
+                            <constraint firstItem="iEw-ay-ZWz" firstAttribute="top" secondItem="MNQ-el-gs7" secondAttribute="bottom" constant="24" id="hTT-hX-gpC"/>
+                            <constraint firstItem="MNQ-el-gs7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="135" id="nYS-sC-sA3"/>
+                            <constraint firstItem="iEw-ay-ZWz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="p2K-oB-d5j"/>
+                            <constraint firstItem="lge-3p-K8D" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="qvH-aa-boY"/>
+                            <constraint firstItem="0Kn-kA-mQC" firstAttribute="top" secondItem="lge-3p-K8D" secondAttribute="bottom" constant="58" id="vkc-N5-f4J"/>
+                            <constraint firstItem="lge-3p-K8D" firstAttribute="top" secondItem="cbj-ln-mUU" secondAttribute="bottom" constant="24" id="zGp-aY-fdx"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="iEw-ay-ZWz" id="Ige-eR-QXT"/>
+                        <outlet property="loginButton" destination="0Kn-kA-mQC" id="xqj-bS-h4x"/>
+                        <outlet property="passwordTextField" destination="lge-3p-K8D" id="Ndx-tH-pn9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

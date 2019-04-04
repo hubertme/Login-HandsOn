@@ -9,11 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    // MARK: - Attributes
+    
+    // MARK: - Outlets
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    
+    // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
+    
+    // MARK: - Methods
 
 
 }
