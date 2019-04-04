@@ -40,7 +40,7 @@ class LoginViewModel {
         // Do all server request here
         print("Login attempted with email: \(model.email) pass: \(model.password)!")
         self.isSuccess.value = true
+        self.errorMessage.value = nil
     }
-    
     
 }
