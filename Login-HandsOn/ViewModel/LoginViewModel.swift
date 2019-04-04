@@ -26,11 +26,11 @@ class LoginViewModel {
     let passwordViewModel = PasswordViewModel()
     
     // MARK: - Methods
-    private func validateCredentials() -> Bool {
+    func validateCredentials() -> Bool {
         return emailViewModel.validateCredentials() && passwordViewModel.validateCredentials()
     }
     
-    private func loginUser() {
+    func loginUser() {
         // Initialised model with loaded value
         model.email = emailViewModel.data.value
         model.password = passwordViewModel.data.value
