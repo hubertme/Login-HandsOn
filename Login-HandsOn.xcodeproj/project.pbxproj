@@ -54,14 +54,46 @@
 		FC3ADAE42255C8D50095E7FE /* Login-HandsOn */ = {
 			isa = PBXGroup;
 			children = (
+				FC3ADAF82255CA520095E7FE /* Model */,
+				FC3ADAF72255CA4C0095E7FE /* ViewModel */,
+				FC3ADAF92255CAC70095E7FE /* Controller */,
+				FC3ADAFA2255CACC0095E7FE /* View */,
 				FC3ADAE52255C8D50095E7FE /* AppDelegate.swift */,
-				FC3ADAE72255C8D50095E7FE /* ViewController.swift */,
-				FC3ADAE92255C8D50095E7FE /* Main.storyboard */,
 				FC3ADAEC2255C8D60095E7FE /* Assets.xcassets */,
-				FC3ADAEE2255C8D60095E7FE /* LaunchScreen.storyboard */,
 				FC3ADAF12255C8D60095E7FE /* Info.plist */,
 			);
 			path = "Login-HandsOn";
+			sourceTree = "<group>";
+		};
+		FC3ADAF72255CA4C0095E7FE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC3ADAF82255CA520095E7FE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FC3ADAF92255CAC70095E7FE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC3ADAE72255C8D50095E7FE /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FC3ADAFA2255CACC0095E7FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC3ADAE92255C8D50095E7FE /* Main.storyboard */,
+				FC3ADAEE2255C8D60095E7FE /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
