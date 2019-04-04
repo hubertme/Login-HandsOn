@@ -82,8 +82,14 @@ class ViewController: UIViewController {
                     
                     let alertController = UIAlertController(title: "Failed to sign in", message: "\(errorMessage)", preferredStyle: .alert)
                     let okAction = UIAlertAction(title: "Ok!", style: .cancel, handler: { (_) in
-                        self.emailTextField.text = ""
-                        self.passwordTextField.text = ""
+                        
+                        if errorMessage == self.loginViewModel.emailViewModel.errorMessage {
+                            self.emailTextField.text = ""
+                            self.emailTextField.becomeFirstResponder()
+                        } else if errorMessage == self.loginViewModel.passwordViewModel.errorMessage {
+                            self.passwordTextField.text = ""
+                            self.passwordTextField.becomeFirstResponder()
+                        }
                         
                         // Reset all
                         self.loginViewModel.model.email = ""
