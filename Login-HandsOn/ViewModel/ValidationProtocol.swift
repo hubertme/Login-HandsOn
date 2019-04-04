@@ -14,7 +14,7 @@ protocol ValidationProtocol {
     
     // Observables
     var data: Variable<String> { get set }
-    var errorValues: Variable<String?> { get }
+    var errorValue: Variable<String?> { get }
     
     // Validation
     func validateCredentials() -> Bool
