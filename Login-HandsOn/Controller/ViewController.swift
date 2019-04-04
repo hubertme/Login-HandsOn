@@ -45,7 +45,6 @@ class ViewController: UIViewController {
         self.loginButton.rx.tap.do(onNext: { [unowned self] in
             self.emailTextField.resignFirstResponder()
             self.passwordTextField.resignFirstResponder()
-            print("Button tapped!")
         }).subscribe(onNext: { [unowned self] in
             if self.loginViewModel.validateCredentials() {
                 self.loginViewModel.loginUser()
@@ -60,7 +59,6 @@ class ViewController: UIViewController {
         // Case success
         self.loginViewModel.isSuccess.asObservable()
             .bind { (value) in
-                print("Callbacks when success")
                 if value == true {
                     self.credentialLabel.text = "Attempted login with\n\nEmail: \(self.loginViewModel.model.email)\nPassword: \(self.loginViewModel.model.password)"
                     UIView.animate(withDuration: 2, animations: {
@@ -84,9 +82,10 @@ class ViewController: UIViewController {
                         self.emailTextField.text = ""
                         self.passwordTextField.text = ""
                         
-                        // For making sure
+                        // Reset all
                         self.loginViewModel.model.email = ""
                         self.loginViewModel.model.password = ""
+                        self.loginViewModel.isSuccess.value = false
                     })
                     alertController.addAction(okAction)
                     self.present(alertController, animated: true, completion: nil)
