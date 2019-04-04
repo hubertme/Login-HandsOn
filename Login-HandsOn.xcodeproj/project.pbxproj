@@ -16,6 +16,7 @@
 		FC3ADAFC2255CBD40095E7FE /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADAFB2255CBD40095E7FE /* LoginModel.swift */; };
 		FC3ADAFE2255CC5D0095E7FE /* ValidationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADAFD2255CC5D0095E7FE /* ValidationProtocol.swift */; };
 		FC3ADB002255CFE80095E7FE /* PasswordViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADAFF2255CFE80095E7FE /* PasswordViewModel.swift */; };
+		FC3ADB022255D3520095E7FE /* EmailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3ADB012255D3520095E7FE /* EmailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		FC3ADAFB2255CBD40095E7FE /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		FC3ADAFD2255CC5D0095E7FE /* ValidationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationProtocol.swift; sourceTree = "<group>"; };
 		FC3ADAFF2255CFE80095E7FE /* PasswordViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordViewModel.swift; sourceTree = "<group>"; };
+		FC3ADB012255D3520095E7FE /* EmailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			children = (
 				FC3ADAFD2255CC5D0095E7FE /* ValidationProtocol.swift */,
 				FC3ADAFF2255CFE80095E7FE /* PasswordViewModel.swift */,
+				FC3ADB012255D3520095E7FE /* EmailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3ADAE82255C8D50095E7FE /* ViewController.swift in Sources */,
+				FC3ADB022255D3520095E7FE /* EmailViewModel.swift in Sources */,
 				FC3ADAFC2255CBD40095E7FE /* LoginModel.swift in Sources */,
 				FC3ADAE62255C8D50095E7FE /* AppDelegate.swift in Sources */,
 				FC3ADAFE2255CC5D0095E7FE /* ValidationProtocol.swift in Sources */,
