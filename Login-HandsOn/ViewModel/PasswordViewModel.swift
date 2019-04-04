@@ -13,7 +13,11 @@ import RxSwift
 class PasswordViewModel: ValidationProtocol {
     
     // MARK: - Attributes
-    var errorMessage: String = "Please enter a valid password"
+    var errorMessage: String {
+        get {
+            return "Please enter a valid password"
+        }
+    }
     var data: Variable<String> = Variable("")
     var errorValue: Variable<String?> = Variable(nil)
     
